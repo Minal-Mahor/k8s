@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app
+  name: simpleapp
 spec:
   selector:
     matchLabels:
-      name: flask-app
+      name: simpleapp
   template:
     metadata:
       labels:
-        name: flask-app
+        name: simpleapp
     spec:
       containers:
       - name: myapp
-        image: minalmahor/k8s-cluster
+        image: minalmahor/mycluster
         ports:
         - containerPort: 30017
